@@ -4,15 +4,13 @@ import {EditorContext, EditorContextType} from '../EditorContext';
 export const Editor: React.FC = () => {
     const { text, updateText } = React.useContext(EditorContext) as EditorContextType;
 
-    function handleTextChange() {
-        var textZ = "updated";
-        console.log('Change:' + textZ)
-        updateText(textZ);
+    function handleTextChange(event: any) {
+        updateText(event.target.value);
     }
     
     return (
         <div className="w-4/5  h-full">
-            <button onClick={handleTextChange}> {text} </button>
+            <textarea value={text} onChange={handleTextChange}></textarea>
         </div>
     )
 }
