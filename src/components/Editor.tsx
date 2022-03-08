@@ -1,16 +1,18 @@
 import React, { Component } from "react";
-import EditorContext from '../EditorContext';
+import {EditorContext, EditorContextType} from '../EditorContext';
 
 export const Editor: React.FC = () => {
-    const editorContext = React.useContext(EditorContext);
+    const { text, updateText } = React.useContext(EditorContext) as EditorContextType;
 
     function handleTextChange() {
-        console.log('Change')
+        var textZ = "updated";
+        console.log('Change:' + textZ)
+        updateText(textZ);
     }
     
     return (
         <div className="w-4/5  h-full">
-            <p onClick={handleTextChange}> {editorContext?.markdownText} </p>
+            <button onClick={handleTextChange}> {text} </button>
         </div>
     )
 }
