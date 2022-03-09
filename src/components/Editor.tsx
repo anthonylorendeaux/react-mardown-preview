@@ -10,7 +10,7 @@ export const Editor: React.FC = () => {
     
     return (
         <div className="w-4/5  h-full">
-            <textarea value={text} onChange={handleTextChange}></textarea>
+            <textarea className="h-full w-full" value={text} onChange={handleTextChange}></textarea>
         </div>
     )
 }
