@@ -1,6 +1,3 @@
-import { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
 import {Editor} from './components/Editor';
 import {Markdown} from './components/Markdown';
 import EditorProvider from './EditorContext';

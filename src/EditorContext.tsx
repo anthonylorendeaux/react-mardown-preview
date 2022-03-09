@@ -8,7 +8,7 @@ export type EditorContextType = {
 export const EditorContext = createContext<EditorContextType | null>(null);
 
 const EditorProvider: React.FC<React.ReactNode> = ({ children }) => {
-    const [text, setText] = React.useState<string>("# Edit me");
+    const [text, setText] = React.useState<string>("");
     
     const updateText = (text: string) => {
         setText(text);
