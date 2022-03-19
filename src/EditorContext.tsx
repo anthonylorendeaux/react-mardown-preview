@@ -10,10 +10,6 @@ export const EditorContext = createContext<EditorContextType | null>(null);
 const EditorProvider: React.FC<React.ReactNode> = ({ children }) => {
     const [text, setText] = useState<string>("");
 
-    useEffect(() => {
-        setText("# Your document");
-      });
-
     const updateText = (text: string) => {
         setText(text);
     }
