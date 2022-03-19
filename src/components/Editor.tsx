@@ -12,7 +12,7 @@ export const Editor: React.FC = () => {
     }
     
     return (
-        <div className="w-3/5  h-full">
+        <div className="w-4/5 h-full">
             <CodeMirror
                 className="h-4/5 w-full"
                 value={text}
